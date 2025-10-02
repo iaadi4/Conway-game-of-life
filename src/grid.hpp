@@ -7,6 +7,9 @@ class Grid {
         : rows(height/cellSize), columns(width/cellSize), cellSize(cellSize), cells(rows, std::vector<int>(columns, 0)) {};
         void Draw();
         void setValue(int row, int column, int value);
+        int getRows();
+        int getColumns();
+        std::vector<std::vector<int>> getCells();
 
     private:
         int rows;

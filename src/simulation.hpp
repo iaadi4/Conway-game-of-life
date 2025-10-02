@@ -7,6 +7,7 @@ class Simulation {
         :   grid(width, height, cellSize) {};
         void Draw();
         void setCellValue(int row, int column, int value);
+        int countLiveNeighbours(int row, int column);
     
     private:
         Grid grid;
