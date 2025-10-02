@@ -21,6 +21,7 @@ int main() {
         BeginDrawing();
         ClearBackground(GREY);
         grid.Draw();
+        grid.setValue(1, 1, 1);
         EndDrawing();
     }
 
