@@ -18,8 +18,8 @@ void Simulation::setCellValue(int row, int column, int value) {
 int Simulation::countLiveNeighbours(int row, int column) {
     int count = 0;
     for(auto [nr, nc]: d) {
-        int newRow = row+nr;
-        int newColumn = column+nc;
+        int newRow = (row + nr + grid.getRows()) % grid.getRows();
+        int newColumn = (column + nc + grid.getColumns()) % grid.getColumns();
         if(newRow >= 0 && newRow < grid.getRows() && newColumn >= 0 && newColumn < grid.getColumns()) {
             if(grid.getCells()[newRow][newColumn] == 1) {
                 count++;
