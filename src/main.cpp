@@ -6,7 +6,7 @@ int main() {
 
     const int WINDOW_HEIGHT = 750;
     const int WINDOW_WIDTH = 750;
-    const int CELL_SIZE = 25;
+    const int CELL_SIZE = 10;
 
     int FPS = 12;
 
@@ -17,6 +17,8 @@ int main() {
 
     // simulation window
     while(WindowShouldClose() == false) {
+        simulation.update();
+
         // Drawing
         BeginDrawing();
         ClearBackground(GREY);

@@ -10,6 +10,7 @@ class Grid {
         int getRows();
         int getColumns();
         std::vector<std::vector<int>> getCells();
+        void fillRandomValues();
 
     private:
         int rows;

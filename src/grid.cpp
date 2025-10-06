@@ -28,3 +28,12 @@ int Grid::getColumns() {
 std::vector<std::vector<int>> Grid::getCells() {
     return cells;
 }
+
+void Grid::fillRandomValues() {
+    for(int row = 0; row < rows; row++) {
+        for(int column = 0; column < columns; column++) {
+            int randomValue = GetRandomValue(0, 5);
+            cells[row][column] = (randomValue == 5) ? 1 : 0;
+        }
+    }
+}
